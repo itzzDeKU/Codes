@@ -56,11 +56,11 @@ void checkClass(vector<int> &ipb){
 		}
 		nwadd+='0';
 	 }
-	 else if(ipb[0]>224 && ipb[0]<=239){
+	 else if(ipb[0]>223 && ipb[0]<=239){
 		cl='D';
 		nwadd+="Multicast";
 	 }
-	 else{
+	 else if(ipb[0]>239 && ipb[0]<=255){
        cl='E';
 	   nwadd+="Reserved";
 	 }
